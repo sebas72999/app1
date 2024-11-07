@@ -1,0 +1,26 @@
+ion-content {
+  --background: #000000; /* Fondo negro */
+}
+
+.welcome-message h1 {
+  color: #ffffff;
+  text-align: center;
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+.welcome-message p {
+  color: #bbbbbb;
+  text-align: center;
+  font-size: 16px;
+  margin: 10px 20px;
+}
+
+.menu-options {
+  padding: 20px;
+}
+
+ion-button {
+  margin-top: 15px;
+  --border-radius: 8px;
+}

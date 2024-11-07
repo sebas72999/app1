@@ -1,0 +1,69 @@
+
+<ion-menu side="start" menuId="first" contentId="main-content">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Menú</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item routerLink="/inicio">
+        <ion-icon slot="start" name="search"></ion-icon>
+        <ion-label>Buscar Viajes</ion-label>
+      </ion-item>
+      <ion-item routerLink="/historial-viajes">
+        <ion-icon slot="start" name="time"></ion-icon>
+        <ion-label>Historial de Viajes</ion-label>
+      </ion-item>
+      <ion-item routerLink="/perfil">
+        <ion-icon slot="start" name="person"></ion-icon>
+        <ion-label>Perfil</ion-label>
+      </ion-item>
+      <ion-item routerLink="/mapa-viajes">
+        <ion-icon slot="start" name="map"></ion-icon>
+        <ion-label>Mapa de Viajes</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Buscar Viajes - Yo Te Llevo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- Campo de destino con lista desplegable de comunas -->
+  <ion-item>
+    <ion-label>Destino</ion-label>
+    <ion-select [(ngModel)]="destino" placeholder="Selecciona el destino" interface="action-sheet">
+      <ion-select-option *ngFor="let comuna of comunas" [value]="comuna">{{ comuna }}</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <!-- Campo de fecha con ion-datetime -->
+  <ion-item>
+    <ion-label>Fecha</ion-label>
+    <ion-datetime 
+      [(ngModel)]="fecha" 
+      displayFormat="DD/MM/YYYY" 
+      pickerFormat="DD/MM/YYYY"
+      placeholder="Selecciona una fecha"
+      cancelText="Cancelar" 
+      doneText="Seleccionar">
+    </ion-datetime>
+  </ion-item>
+
+  <!-- Botón para buscar viajes -->
+  <ion-button expand="block" color="primary" (click)="buscarViajes()">Buscar</ion-button>
+</ion-content>

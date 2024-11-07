@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Inicio de Sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Inicio de Sesión</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <ion-item>
+      <ion-input [(ngModel)]="correo" label="Correo" LabelPlacement="Floating" placeholder="Ingrese su correo"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]="clave" type="password" label="Contraseña" LabelPlacement="Floating" placeholder="Ingrese su contraseña"></ion-input>
+    </ion-item>
+
+    <!-- Botón para iniciar sesión -->
+    <ion-button expand="block" (click)="iniciarSesion()">Iniciar Sesión</ion-button>
+
+    <!-- Botón para registrar nuevo usuario -->
+    <ion-button expand="block" (click)="irARegistro()" color="secondary">Registrar Nuevo Usuario</ion-button>
+
+    <!-- Enlace para recuperar contraseña -->
+    <ion-text class="recover-link">
+      <a (click)="irARecuperarPassword()">¿Olvidaste tu contraseña?</a>
+    </ion-text>
+
+    <!-- Mostrar mensaje de error si el inicio de sesión falla -->
+    <!-- <ion-text color="danger" *ngIf="errorMsg">
+      <p>{{ errorMsg }}</p>
+    </ion-text> -->
+  </div>
+
+  <!-- Imagen GIF agregada al final del contenido -->
+  <div id="gif-container">
+    <img src="https://i.pinimg.com/originals/e1/7d/01/e17d012c79919bc731316be99a0506be.gif" alt="Fondo Animado" />
+  </div>
+</ion-content>

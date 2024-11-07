@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Yo Te Llevo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="yo-te-llevo-page">
+  <div class="welcome-message">
+    <h1>Bienvenido a Yo Te Llevo</h1>
+    <p>Tu mejor opción para compartir viajes de manera rápida y segura.</p>
+  </div>
+
+  <div class="menu-options">
+    <ion-button expand="block" color="primary" [routerLink]="['/buscar-viajes']">Buscar Viajes</ion-button>
+    <ion-button expand="block" color="secondary" [routerLink]="['/historial-viajes']">Historial de Viajes</ion-button>
+    <ion-button expand="block" color="tertiary" [routerLink]="['/perfil']">Mi Perfil</ion-button>
+  </div>
+</ion-content>
+

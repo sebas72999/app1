@@ -1,0 +1,27 @@
+ion-content {
+  --background: #000; /* Fondo negro */
+  color: #fff; /* Color de texto blanco */
+}
+
+ion-item {
+  --background: transparent; /* Fondo transparente */
+  color: #fff; /* Color del texto en blanco */
+  border: 1px solid #fff; /* Borde blanco alrededor de cada campo */
+  margin: 10px 0; /* Separación entre los campos */
+  border-radius: 8px; /* Bordes redondeados */
+}
+
+ion-label {
+  color: #fff; /* Color de las etiquetas en blanco */
+}
+
+ion-input, ion-select {
+  color: #fff; /* Color de los inputs en blanco */
+}
+
+ion-button {
+  --background: #1e90ff; /* Color de fondo del botón */
+  --color: #fff; /* Color del texto del botón */
+  margin-top: 20px; /* Separación superior para el botón */
+  border-radius: 8px; /* Bordes redondeados para el botón */
+}

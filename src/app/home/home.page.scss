@@ -1,0 +1,76 @@
+/* Fondo negro completo */
+ion-content {
+  --background: #000000;
+}
+
+#container {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 20px;
+}
+
+ion-item {
+  --background: transparent;
+  border: 1px solid white;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+ion-input {
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+}
+
+/* Botones */
+ion-button {
+  --background: linear-gradient(90deg, #ff416c, #ff4b2b);
+  width: 100%;
+  height: 50px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-top: 20px;
+  transition: transform 0.2s ease-in-out;
+}
+
+ion-button:hover {
+  transform: scale(1.05);
+}
+
+/* Estilo del enlace de recuperación de contraseña */
+.recover-link {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.recover-link a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.recover-link a:hover {
+  text-decoration: underline;
+}
+
+
+/* Estilo para el GIF al fondo */
+#gif-container {
+  margin-top: 450px;
+  display: flex;
+  justify-content: center;
+}
+
+#gif-container img {
+  width: 100%;
+  max-width: 300px;
+  opacity: 0.5; /* Opacidad para que el GIF no distraiga demasiado */
+  border-radius: 10px;
+}
