@@ -53,7 +53,7 @@ export class MapaViajesPage implements OnInit {
       center: L.latLng(lat, lng),
       zoom: 15,
       layers: [
-        L.tileLayer('https://.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
           attribution: '&copy; OpenStreetMap contributors'
         })
       ]
